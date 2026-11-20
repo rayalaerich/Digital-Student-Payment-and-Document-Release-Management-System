@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transactions · PSU – Goa Campus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/psu_logo.png" alt="Partido State University seal">
+      <div>
+        <small>PSU – GOA CAMPUS</small>
+        <strong>Payment and Document Release</strong>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Main">
+      <a href="list.html" aria-current="page">Transactions</a>
+      <a href="form.html">Register payment</a>
+      <a href="#">Settings ▾</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <div>
+        <p class="crumbs">Home › Transactions</p>
+        <h1>Payment transactions</h1>
+      </div>
+      <a class="btn" href="form.html">+ Register payment</a>
+    </div>
+
+    <!-- search + filter (GET form: PHP will read $_GET['q'] and $_GET['TermID'] in Week 15) -->
+    <form class="card toolbar" action="#" method="get" role="search">
+      <div class="field">
+        <label for="q">Search reference or School ID</label>
+        <input id="q" name="q" type="search" placeholder="e.g. TXN-2026-0004 or 2024-0004">
+      </div>
+      <div class="field">
+        <label for="TermID">Academic term</label>
+        <select id="TermID" name="TermID">
+          <option value="">All terms</option>
+          <option value="3" selected>1st Semester · 2026-2027</option>
+          <option value="2">2nd Semester · 2025-2026</option>
+          <option value="1">1st Semester · 2025-2026</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <section class="card" aria-label="Transactions list">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Reference</th>
+              <th scope="col">Student</th>
+              <th scope="col">Purpose</th>
+              <th scope="col">Status</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- rows copied from Phase3_Database_Fixed.sql (payment_transaction + student + payment_purpose + payment_receipt) -->
+            <tr>
+              <td data-label="Reference"><strong>TXN-2026-0001</strong></td>
+              <td data-label="Student">Juan Dela Cruz <span class="sub">2024-0001</span></td>
+              <td data-label="Purpose">Certificate of Enrollment</td>
+              <td data-label="Status"><span class="badge PAID">PAID</span></td>
+              <td class="actions-cell"><div class="actions"><a class="btn btn-secondary btn-sm" href="#">View receipt OR-2026-0001</a></div></td>
+            </tr>
+            <tr>
+              <td data-label="Reference"><strong>TXN-2026-0002</strong></td>
+              <td data-label="Student">Maria Santos <span class="sub">2024-0002</span></td>
+              <td data-label="Purpose">Certificate of Enrollment</td>
+              <td data-label="Status"><span class="badge PAID">PAID</span></td>
+              <td class="actions-cell"><div class="actions"><a class="btn btn-secondary btn-sm" href="#">View receipt OR-2026-0002</a></div></td>
+            </tr>
+            <tr>
+              <td data-label="Reference"><strong>TXN-2026-0003</strong></td>
+              <td data-label="Student">Pedro Reyes <span class="sub">2024-0003</span></td>
+              <td data-label="Purpose">Certificate of Enrollment</td>
+              <td data-label="Status"><span class="badge RELEASED">RELEASED</span></td>
+              <td class="actions-cell"><div class="actions"><a class="btn btn-secondary btn-sm" href="#">View receipt OR-2026-0003</a></div></td>
+            </tr>
+            <tr>
+              <td data-label="Reference"><strong>TXN-2026-0004</strong></td>
+              <td data-label="Student">Ana Garcia <span class="sub">2024-0004</span></td>
+              <td data-label="Purpose">Student Sticker</td>
+              <td data-label="Status"><span class="badge PENDING">PENDING</span></td>
+              <td class="actions-cell">
+                <div class="actions">
+                  <a class="btn btn-secondary btn-sm" href="form.html">Edit</a>
+                  <a class="btn btn-danger btn-sm" href="#">Cancel</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Reference"><strong>TXN-2026-0005</strong></td>
+              <td data-label="Student">Carlo Mendoza <span class="sub">2024-0005</span></td>
+              <td data-label="Purpose">Certificate of Enrollment</td>
+              <td data-label="Status"><span class="badge PAID">PAID</span></td>
+              <td class="actions-cell"><div class="actions"><a class="btn btn-secondary btn-sm" href="#">View receipt OR-2026-0005</a></div></td>
+            </tr>
+            <tr>
+              <td data-label="Reference"><strong>TXN-2026-0006</strong></td>
+              <td data-label="Student">Liza Ramos <span class="sub">2024-0006</span></td>
+              <td data-label="Purpose">Certificate of Enrollment</td>
+              <td data-label="Status"><span class="badge RELEASED">RELEASED</span></td>
+              <td class="actions-cell"><div class="actions"><a class="btn btn-secondary btn-sm" href="#">View receipt OR-2026-0006</a></div></td>
+            </tr>
+            <tr>
+              <td data-label="Reference"><strong>TXN-2026-0007</strong></td>
+              <td data-label="Student">Mark Villanueva <span class="sub">2024-0007</span></td>
+              <td data-label="Purpose">Certificate of Enrollment</td>
+              <td data-label="Status"><span class="badge PENDING">PENDING</span></td>
+              <td class="actions-cell">
+                <div class="actions">
+                  <a class="btn btn-secondary btn-sm" href="form.html">Edit</a>
+                  <a class="btn btn-danger btn-sm" href="#">Cancel</a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Reference"><strong>TXN-2026-0008</strong></td>
+              <td data-label="Student">Joy Navarro <span class="sub">2024-0008</span></td>
+              <td data-label="Purpose">Student Sticker</td>
+              <td data-label="Status"><span class="badge PAID">PAID</span></td>
+              <td class="actions-cell"><div class="actions"><a class="btn btn-secondary btn-sm" href="#">View receipt OR-2026-0008</a></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Empty state (shown by PHP in Week 15 when the query returns 0 rows). Hidden for now. -->
+      <p class="empty" hidden>No transactions yet. Register the first payment.</p>
+    </section>
+
+    <p class="mut">Edit and Cancel appear only for PENDING transactions. Paid or released transactions show their receipt instead.</p>
+  </main>
+
+</body>
+</html>
